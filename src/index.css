@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-app: #F7F6F0;
+    --bg-surface: #FFFFFF;
+    --bg-surface-soft: #E5F3EC;
+    --bg-surface-elevated: #FFFFFF;
+    --text-main: #24332D;
+    --text-muted: #64748B;
+    --text-heading: #152022;
+    --border-line: #E2E8F0;
+    --accent-primary: #15856B;
+    --accent-primary-hover: #126E59;
+    --accent-primary-text: #FFFFFF;
+    --accent-alert: #C86137;
+    --accent-alert-soft: #FDE8E1;
+    --score-box-bg: #E5F3EC;
+  }
+
+  .dark {
+    --bg-app: #0B1120;
+    --bg-surface: #1E293B;
+    --bg-surface-soft: #162235;
+    --bg-surface-elevated: #283548;
+    --text-main: #F8FAFC;
+    --text-muted: #94A3B8;
+    --text-heading: #F8FAFC;
+    --border-line: #334155;
+    --accent-primary: #00E599;
+    --accent-primary-hover: #00C885;
+    --accent-primary-text: #0B1120;
+    --accent-alert: #F59E0B;
+    --accent-alert-soft: #422006;
+    --score-box-bg: #162235;
+  }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+/* Base typography: +2 points boost for comfortable court reading */
+html {
+  font-size: 18px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Court Vision / Large Text Mode: +2 more points boost for blurry/sweaty eyes on court */
+html.court-vision-active {
+  font-size: 20px !important;
+}
+
+@media (max-width: 640px) {
+  html.court-vision-active {
+    font-size: 20.5px !important;
+  }
+}
+
+/* Fixed-pixel micro-text upgrade to clean, readable size without overflowing badges or cards */
+.court-vision-active [class*="text-[9px]"],
+.court-vision-active [class*="text-[10px]"],
+.court-vision-active [class*="text-[10.5px]"],
+.court-vision-active [class*="text-[11px]"],
+.court-vision-active [class*="text-[11.5px]"] {
+  font-size: 14.5px !important;
+  line-height: 1.25 !important;
+}
+
+.court-vision-active [class*="text-[12px]"],
+.court-vision-active [class*="text-[13px]"] {
+  font-size: 15.5px !important;
+  line-height: 1.25 !important;
+}
+
+/* Court Card Elements: Prominent, clear scores and team titles that fit comfortably */
+.court-vision-active .court-score-val {
+  font-size: 3.65rem !important; /* ~68px punchy digits, clearly legible while fitting inside card */
+  line-height: 1 !important;
+  font-weight: 900 !important;
+}
+
+.court-vision-active .court-team-title {
+  font-size: 1.15rem !important; /* ~21px bold team name */
+  font-weight: 900 !important;
+}
+
+.court-vision-active .court-players-sub {
+  font-size: 0.85rem !important; /* ~16px player names */
+  font-weight: 600 !important;
+}
+
+.court-vision-active .court-header-name {
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+}
+
+.court-vision-active .waiting-team-title {
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+}
+
+.court-vision-active .badge-stage {
+  font-size: 0.8rem !important;
+  padding: 0.25rem 0.6rem !important;
+}

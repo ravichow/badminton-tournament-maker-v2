@@ -1,0 +1,8 @@
+name = "badminton-tournament-maker-v2"
+pages_build_output_dir = "dist"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "badminton-tournament-maker-v2-db"
+database_id = "c0ae2fbe-be6a-4e32-8415-a88b93b81915"
