@@ -2,7 +2,7 @@
 
 A fast, responsive, and resilient badminton doubles tournament manager deployed on **Cloudflare Pages** and powered by **Cloudflare D1** serverless SQLite database.
 
-**Live Application**: [https://badminton-tournament-maker-v2.pages.dev](https://badminton-tournament-maker-v2.pages.dev)
+**Live Application**: [https://badminton-tournament-maker.pages.dev](https://badminton-tournament-maker.pages.dev)
 
 ---
 

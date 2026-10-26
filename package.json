@@ -11,8 +11,8 @@
     "test:watch": "vitest",
     "pages:dev": "wrangler pages dev dist",
     "d1:init:local": "wrangler d1 execute badminton-tournament-maker-v2-db --local --file=./schema.sql",
-    "d1:init:remote": "wrangler d1 execute badminton-tournament-maker-v2-db --remote --file=./schema.sql",
-    "pages:deploy": "wrangler pages deploy dist --project-name=badminton-tournament-maker-v2 --branch=main"
+    "d1:init:remote": "wrangler d1 execute badminton-tournament-maker-v2-db --remote --file=./schema.sql --yes",
+    "pages:deploy": "wrangler pages deploy dist --project-name=badminton-tournament-maker --branch=main"
   },
   "dependencies": {
     "html2canvas": "^1.4.1",
